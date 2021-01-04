@@ -1,0 +1,18 @@
+Simple Use 
+----------
+1. Make sure that your python environment has 
+- Tkinter
+- numpy
+- PIL
+2. Run the python program with your choice of compiler
+3. Press the 'spacebar' to watch the AI play
+
+Edit Options
+------------
+Edit the rows to change the amount of rows and columns that appear. 
+*Note that Hamiltonian paths will not work with an odd dimension graph so keep it even
+
+Change Delay to adjust speed
+*Note must be of type int
+
+Uncomment lines 127 -> 140 to see the Hamiltonian path on the board 
