@@ -47,13 +47,13 @@ def print_board(board: dict, player_1: str = "P 1", player_2: str = "P 2") -> No
     """
     print(
         f"""
-      6  5  4  3  2  1
-+---+--+--+--+--+--+--+---+
+   {''.join(f'{(len(board["top"]) - num):3}' for num in range(len(board['top'])))}
++---+{'--+'*len(board['top'])}---+
 |{player_1}|{'|'.join(f'{item:2}' for item in reversed(board['top']))}|   | <- PLAYER 1
-|{board["top_score"]:3}+--+--+--+--+--+--+{board["bottom_score"]:3}|
-|   |{board["bottom"][0]:2}|{board["bottom"][1]:2}|{board["bottom"][2]:2}|{board["bottom"][3]:2}|{board["bottom"][4]:2}|{board["bottom"][5]:2}|{player_2}| PLAYER 2 ->
-+---+--+--+--+--+--+--+---+
-      1  2  3  4  5  6
+|{board["top_score"]:3}+{'--+'*len(board['top'])}{board["bottom_score"]:3}|
+|   |{'|'.join(f'{item:2}' for item in board['bottom'])}|{player_2}| PLAYER 2 ->
++---+{'--+'*len(board['bottom'])}---+
+   {''.join(f'{(num+1):3}' for num in range(len(board['bottom'])))}
 """
     )
     return
@@ -310,6 +310,15 @@ def get_player_move(board: dict, turn: str) -> int:
         print("Sorry, That Is Not A Valid Move.")
 
 
+def clear_screen(num: int) -> None:
+    """A function to preform a new line 'num' amount of times
+
+    Args:
+        num (int): the amount of new lines that you want
+    """
+    [print() for _ in range(num)]
+
+
 if __name__ == "__main__":
     # Default board, feel free to update if you know what you're doing and want a more interesting game.
     # The code should be set up mostly generic enough to handle different boards / piece amount
@@ -344,9 +353,11 @@ if __name__ == "__main__":
     # Top always goes first, feel free to change if you want to be a reble
     turn = "top"
 
+    # visual for what the AI did
+    ai_printed_moves = []
+
     # While the games not over!!!
     while not ((not any(board["top"])) or (not any(board["bottom"]))):
-
         # Players move
         if turn == PLAYER:
             # Getting the players move
@@ -367,7 +378,7 @@ if __name__ == "__main__":
                     continue
                 winning_confidence = confidence
                 break
-            print(f"AI Moved : {move+1}\nChance of Winning : {winning_confidence}")
+            ai_printed_moves.append(f"AI Moved : {move+1}\tChance of Winning : {winning_confidence}")
 
             # Updating the board
             board, go_again = move_piece(board, move, AI)
@@ -377,6 +388,10 @@ if __name__ == "__main__":
             turn = "bottom" if turn == "top" else "top"
 
         # Shows the new baord
+        clear_screen(40)
+        if (turn == PLAYER) and ai_printed_moves:
+            [print(move) for move in ai_printed_moves]
+            ai_printed_moves = []
         print_board(board, PRINT_P1, PRINT_P2)
 
     # WIN / LOSS / DRAW
