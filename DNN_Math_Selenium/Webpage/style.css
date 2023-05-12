@@ -1,0 +1,49 @@
+/* This CSS Code Was Pair Programmed with Chat-GPT 3.5 */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+#question {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 50px 0;
+}
+
+#operator-buttons {
+    margin-bottom: 20px;
+}
+
+.operator-button {
+    padding: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.operator-button.active {
+    background-color: #000;
+    color: #fff;
+}
+
+#answer {
+    padding: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#submit {
+    padding: 10px;
+    font-size: 18px;
+}
+
+#result {
+    font-size: 24px;
+    margin-top: 50px;
+}
