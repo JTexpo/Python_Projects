@@ -268,7 +268,7 @@ if __name__ == "__main__":
     # Train AI Here
 
     for data_input in data_inputs:
-        print(f"{data_input[0][0]*10} * {data_input[0][1]*10} = {my_dnn.forward_propagation(np.array(data_input))[0] * 20}")
+        print(f"{data_input[0][0]*10} * {data_input[0][1]*10} = {my_dnn.forward_propagation(np.array(data_input))[0][0] * 20}")
 
     DNN :
     input_size=2,
@@ -327,7 +327,7 @@ if __name__ == "__main__":
     # Train AI Here
     
     for data_input in data_inputs:
-        print(f"{data_input[0][0]*10} - {data_input[0][1]*10} = {my_dnn.forward_propagation(np.array(data_input))[0] * 20 - 10}")
+        print(f"{data_input[0][0]*10} - {data_input[0][1]*10} = {my_dnn.forward_propagation(np.array(data_input))[0][0] * 20 - 10}")
 
     DNN :
     input_size=2,
@@ -355,7 +355,6 @@ if __name__ == "__main__":
     -------------------------
     Uh-oh, theres nothing here... well that's because I'm not the smartest person in the world. 
     There exists a Universal Approximation Theorem, which states that Multiplication is possible with an infinite amount of nodes in a single hidden layer.
-    ... However, this is a theorem, and not a formula :/
 
     To point you into the right direction, with a hidden layer of [16], you can have very exeptional results!
     Best of luck finding the number between one and infinity which best fits for multiplication & division
@@ -363,13 +362,19 @@ if __name__ == "__main__":
     Link to learn more : https://en.wikipedia.org/wiki/Universal_approximation_theorem
 
     AMAZING LINK FOR DNNs WITH PYTHON : https://towardsdatascience.com/how-to-build-your-own-neural-network-from-scratch-in-python-68998a08e4f6
+
+
+    ... However~
+    m = x*y => ln(m) = ln(x) + ln(y) ; for x & y > 0
+    NOTE : Mathematicians are awesome, and this means that we 'can' do multiplication, our grooming of the data looks slightly interesting
+
     '''
     data_inputs = []
     data_outputs = []
     for x in range(9):
         for y in range(9):
-            data_inputs.append([[(x + 1) / 10.0, (y + 1) / 10.0]])
-            data_outputs.append([[((x + 1) + (y + 1)) / 20.0]])
+            data_inputs.append([[np.log(x + 1), np.log(y + 1)]])
+            data_outputs.append([[(np.log(x + 1) + np.log(y + 1)) / 5.0]])
     
     my_dnn = DeepNeuralNetwork(
         input_size=2,
@@ -385,4 +390,4 @@ if __name__ == "__main__":
         learning_rate=.1
     )
     for data_input in data_inputs:
-        print(f"{data_input[0][0]*10} * {data_input[0][1]*10} = {my_dnn.forward_propagation(np.array(data_input))[0] * 20}")
+        print(f"{np.e**data_input[0][0]} * {np.e**data_input[0][1]} = {np.e**(my_dnn.forward_propagation(np.array(data_input))[0][0] * 5)}")
