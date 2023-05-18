@@ -1,1 +1,0 @@
-{"Gmail":"Your_Gmail@gmail.com","Password":"Your_Password","Send_to":"Whatever_Email_You_Want","Subject": "Selenium Practice", "Message":"This is my selenium automation"}
