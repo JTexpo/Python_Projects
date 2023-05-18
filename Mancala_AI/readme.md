@@ -2,7 +2,7 @@
 
 Mancala is a game where players will circle a board counter clockwise attempting to collect beads. This game can be mastered with the MiniMax algorithm due to its turned based action and finite game states. 
 
-Video over topic : https://youtu.be/XRvHv61Z3UY
+[Video over topic](https://youtu.be/XRvHv61Z3UY)
 
 
 ## Table of Contents
@@ -52,7 +52,7 @@ Enjoy!
 
 ## Contributing
 
-Contributions to the Small Library of Babel project are welcome! If you have any bug reports, feature suggestions, or code contributions, please make a request!
+Contributions to the Mancala AI project are welcome! If you have any bug reports, feature suggestions, or code contributions, please make a request!
 
 ## Contact
 
