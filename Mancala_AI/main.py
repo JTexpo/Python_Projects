@@ -310,13 +310,17 @@ def get_player_move(board: dict, turn: str) -> int:
         print("Sorry, That Is Not A Valid Move.")
 
 
-def clear_screen(num: int) -> None:
-    """A function to preform a new line 'num' amount of times
-
-    Args:
-        num (int): the amount of new lines that you want
+def clear_screen() -> None:
     """
-    [print() for _ in range(num)]
+    *NOTE*
+    some terminals may not work well with this code, please feel free to try out this instead...
+
+    # IMPORT THIS AT THE TOP OF THE FILE
+    import os
+    os.system('cls' if os.name == 'nt' else 'clear')
+    """
+    # Clearing screen to make the game visually appealing when updating
+    print("\033c", end="")
 
 
 if __name__ == "__main__":
@@ -388,7 +392,7 @@ if __name__ == "__main__":
             turn = "bottom" if turn == "top" else "top"
 
         # Shows the new baord
-        clear_screen(40)
+        clear_screen()
         if (turn == PLAYER) and ai_printed_moves:
             [print(move) for move in ai_printed_moves]
             ai_printed_moves = []
