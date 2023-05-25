@@ -24,6 +24,7 @@ Ensure that you have Python 3.11 or later installed on your system.
 
 ## Usage
 
+### Main
 To run the application, execute the following command in your terminal:
 
 ```
@@ -46,9 +47,14 @@ Please Enter Which Player You Want To Be :
 2. Player 2
 ```
 
-Enjoy!
+### Tk Main
+To run the application, execute the following command in your terminal:
 
-*Note, the games difficulty is impacted by how far the MiniMax algorithm is preformed. The larger the depth, the more challenging the AI will be
+```
+python3 tk_main.py
+```
+
+this will provide you with a Tkinter GUI to use the app instead of doing it through the terminal.
 
 ## Contributing
 
