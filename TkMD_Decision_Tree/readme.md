@@ -5,7 +5,7 @@ Please do not consult this app as medical advice!
 
 With the meme of 'WebMD' saying that everything you have leads to the worst possible illness, I thought it would be funny to make a parody of this concept. The code uses decision a random forest algorithm to 'diagnose' (not real) the user.
 
-[Video over topic]()
+[Video over topic](https://youtu.be/lrMsO0qGJd4)
 [Kaggle Dataset](https://www.kaggle.com/datasets/kaushil268/disease-prediction-using-machine-learning)
 
 ## Table of Contents
