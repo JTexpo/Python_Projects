@@ -15,8 +15,10 @@ Battleship is a fun game where players take turns trying to predict where the en
 
 ## Features
 
-- RNN from scratch (only NumPy)
-- Interactive Tkinter UI
+- Standard Population Distribution
+- Battleship Game
+- Battleship GUI
+- MatPlotLib heatmap over SPD
 
 ## Installation
 
