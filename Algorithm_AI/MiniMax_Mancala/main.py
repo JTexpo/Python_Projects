@@ -322,8 +322,7 @@ def clear_screen() -> None:
     # Clearing screen to make the game visually appealing when updating
     print("\033c", end="")
 
-
-if __name__ == "__main__":
+def main():
     # Default board, feel free to update if you know what you're doing and want a more interesting game.
     # The code should be set up mostly generic enough to handle different boards / piece amount
     board = {
@@ -409,3 +408,6 @@ if __name__ == "__main__":
         )
     else:
         print(f"DRAW! Are you too looking {MAX_DEPTH} moves ahead?")
+
+if __name__ == "__main__":
+    main()

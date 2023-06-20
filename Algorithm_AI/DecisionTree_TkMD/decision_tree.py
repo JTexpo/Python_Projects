@@ -363,8 +363,7 @@ class DecisionTree:
             print(f"{indent}Right : ", end="")
             self.print_tree(tree.right_node, indent + "  ")
 
-
-if __name__ == "__main__":
+def main():
     # WARNING - I am not a licened doctor and this is only for entertainment purposes.
     # Please do not consult this app as medical advice. Dataset can be found here :
     # https://www.kaggle.com/datasets/kaushil268/disease-prediction-using-machine-learning
@@ -468,3 +467,6 @@ Dataset[90] <= 0.5 ? ( Variance Reduction 20.5 )
     Left  : 42.0
     Right : 41.0
     """
+
+if __name__ == "__main__":
+    main()

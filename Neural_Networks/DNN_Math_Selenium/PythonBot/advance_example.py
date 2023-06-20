@@ -6,8 +6,7 @@ import random
 def free_fall(initial_position, velocity, time):
     return initial_position + (velocity * time) - (0.5 * 9.81 * (time**2))
 
-
-if __name__ == "__main__":
+def main():
     """
     Do Not Be Fooled By The Simplicity Of This Project!
 
@@ -107,3 +106,7 @@ Loss    (Delta)^2     = {(dnn_answer - true_answer)**2}"""
 # -----
 # Delta   (dnn - true)  = 0.14477896700439352
 # Loss    (Delta)^2     = 0.02096094928685927
+
+
+if __name__ == "__main__":
+    main()

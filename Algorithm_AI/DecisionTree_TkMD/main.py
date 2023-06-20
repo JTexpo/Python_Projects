@@ -204,8 +204,7 @@ class WebDT(tk.Tk):
 
         self.update()
 
-
-if __name__ == "__main__":
+def main():
     # WARNING - I am not a licened doctor and this is only for entertainment purposes.
     # Please do not consult this app as medical advice. Dataset can be found here :
     # https://www.kaggle.com/datasets/kaushil268/disease-prediction-using-machine-learning
@@ -234,3 +233,6 @@ if __name__ == "__main__":
         dataset_diagnoses=np.array(diseases_csv_body)[:, -1],
     )
     web_dt.mainloop()
+
+if __name__ == "__main__":
+    main()

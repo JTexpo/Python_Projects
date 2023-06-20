@@ -161,8 +161,7 @@ def division_dnn_solve(
 
     print(f"{answers}/{questions_answer} = {round((answers/questions_answer)*100)}%")
 
-
-if __name__ == "__main__":
+def main():
     web_bot = WebScrapper(
         # On VScode there is a beautiful extension called :
         # Live Server by Ritwick Dey
@@ -199,3 +198,6 @@ if __name__ == "__main__":
                 questions_pulled=QUESTIONS_PULLED,
                 questions_answer=QUESTIONS_ANSWERED,
             )
+
+if __name__ == "__main__":
+    main()

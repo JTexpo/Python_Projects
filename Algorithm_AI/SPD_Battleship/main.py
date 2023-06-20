@@ -350,11 +350,13 @@ class BattleshipGUI(tk.Tk):
         self.battleship.set_random_board(player_id=2)
         self.update_backend_to_frontend()
 
-
-if __name__ == "__main__":
+def main():
     game = BattleshipGame(size=10)
     game.set_random_board(player_id=1, seed=4)
     game.set_random_board(player_id=2, seed=1)
 
     gui = BattleshipGUI(battleship=game, reference_size=24)
     gui.mainloop()
+
+if __name__ == "__main__":
+    main()

@@ -449,7 +449,9 @@ class MancalaTkinterUI(tk.Tk):
                 break
             self.move_pieces(self.ai, move)
 
-
-if __name__ == "__main__":
+def main():
     mancala = MancalaTkinterUI(14)
     mancala.mainloop()
+
+if __name__ == "__main__":
+    main()

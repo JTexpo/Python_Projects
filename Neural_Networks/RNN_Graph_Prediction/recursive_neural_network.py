@@ -358,8 +358,7 @@ def get_training_in_out(
 
     return inputs, outputs
 
-
-if __name__ == "__main__":
+def main():
     INPUT_SIZE = 16
     STEP_SIZE = 1
     LEARNING_RATE = 0.01
@@ -411,3 +410,7 @@ if __name__ == "__main__":
     axes[1, 1].legend()  # Display legend
 
     plt.show()
+
+
+if __name__ == "__main__":
+    main()

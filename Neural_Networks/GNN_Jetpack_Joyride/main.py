@@ -27,7 +27,7 @@ if SEED:
     random.seed(SEED)
     np.random.seed(SEED)
 
-if __name__ == "__main__":
+def main():
     # Creating the game
     game = AIGame(
         screen_width=WINDOW_WIDTH,
@@ -78,3 +78,6 @@ Output Weights: {ai_players[0][1].output_layer_weights}
 Output Weights: {ai_players[0][1].output_layer_biases}
 ------------------------------------------
 ''')
+
+if __name__ == "__main__":
+    main()

@@ -91,8 +91,7 @@ def game_loop(
 
     return geo_people
 
-
-if __name__ == "__main__":
+def main():
     geo_people: List[GeoPerson] = [
         GeoPerson(
             moves=[
@@ -154,3 +153,6 @@ if __name__ == "__main__":
         can_print_board=True,
         fps=0.1,
     )
+
+if __name__ == "__main__":
+    main()

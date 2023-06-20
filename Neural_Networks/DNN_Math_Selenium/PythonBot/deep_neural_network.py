@@ -251,8 +251,7 @@ SIGMOID = ActivationFunction(
     activation_function=_sigmoid, activation_derivative=_sigmoid_derivative
 )
 
-
-if __name__ == "__main__":
+def main():
     '''
     ADDITION
     --------
@@ -391,3 +390,6 @@ if __name__ == "__main__":
     )
     for data_input in data_inputs:
         print(f"{np.e**data_input[0][0]} * {np.e**data_input[0][1]} = {np.e**(my_dnn.forward_propagation(np.array(data_input))[0][0] * 5)}")
+
+if __name__ == "__main__":
+    main()

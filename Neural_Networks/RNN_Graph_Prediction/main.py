@@ -166,8 +166,10 @@ class GraphAI(tk.Tk):
 
         self.update()
 
-
-if __name__ == "__main__":
+def main():
     rnn = RecursiveNeuralNetwork(input_size=8, activation_function=LEAKY_RELU, seed=1)
     graph_ai = GraphAI(rnn=rnn)
     graph_ai.mainloop()
+
+if __name__ == "__main__":
+    main()

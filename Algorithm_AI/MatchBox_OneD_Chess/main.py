@@ -267,7 +267,9 @@ class OneDChess(tk.Tk):
             time.sleep(0.5)
             self._ai_move()
 
-
-if __name__ == "__main__":
+def main():
     game = OneDChess(10)
     game.mainloop()
+
+if __name__ == "__main__":
+    main()
